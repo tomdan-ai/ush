@@ -8,7 +8,7 @@ class User < ApplicationRecord
   ROLES = %i[student admin content_creator]
 
   # Set default role
-  after_initialie :set_default_role, if: :new_record?
+  after_initialize :set_default_role, if: :new_record?
 
 
   def set_default_role
