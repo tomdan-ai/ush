@@ -23,6 +23,11 @@
     <%= f.password_field :password_confirmation %>
   </div>
 
+  <div class="field">
+    <%= f.label :role, "Role" %><br />
+    <%= f.select :role, User::ROLES.map { |role| [role.to_s.humanize, role] }, prompt: "Select your role" %>
+  </div>
+
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>
